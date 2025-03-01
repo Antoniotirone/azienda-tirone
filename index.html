@@ -9,13 +9,12 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e0f2e0; /* Verde più chiaro */
         }
         .navbar {
             position: fixed;
             top: 0;
             width: 100%;
-            background: #5aa35a; /* Verde chiaro */
+            background: #a4d4a4; /* Verde più chiaro */
             padding: 15px;
             text-align: center;
             z-index: 1000;
@@ -26,21 +25,23 @@
             margin: 0 15px;
             font-size: 18px;
         }
-        header {
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url('immagine-home.jpg.webp') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 60px 20px;
-            background: rgba(255, 255, 255, 0.8);
+            color: white;
         }
-        header img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
+        .hero h1 {
+            font-size: 50px;
+            margin: 0;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            color: blue;
-            font-size: 36px;
         }
         .container {
             max-width: 1200px;
@@ -74,7 +75,7 @@
             max-width: 600px;
         }
         footer {
-            background: #5aa35a; /* Verde chiaro */
+            background: #a4d4a4;
             color: white;
             text-align: center;
             padding: 20px;
@@ -92,11 +93,9 @@
         <a href="#contatti">Contatti</a>
     </nav>
 
-    <header id="home">
-        <h1 class="title">Azienda Agricola Tirone</h1>
-        <p>Qualità e tradizione dalla nostra terra</p>
-        <img src="immagine-home.jpg.webp">
-    </header>
+    <section id="home" class="hero">
+        <h1>Azienda Agricola Tirone</h1>
+    </section>
 
     <section id="prodotti" class="container">
         <h2>I nostri prodotti</h2>
