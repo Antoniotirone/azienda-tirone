@@ -14,7 +14,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(164, 212, 164, 0.8);
+            background: rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(10px);
             padding: 15px;
             text-align: center;
@@ -26,16 +26,14 @@
             margin: 0 15px;
             font-size: 18px;
         }
-        .hero {
+        .hero, .content-section {
             position: relative;
             width: 100%;
-            height: 100vh;
+            height: auto;
             background: url('immagine-home.jpg.webp') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             text-align: center;
             color: white;
+            padding: 40px 0;
         }
         .hero h1 {
             font-size: 50px;
@@ -44,24 +42,13 @@
             padding: 20px;
             border-radius: 10px;
         }
-        .content-section {
-            max-width: 1200px;
-            margin: auto;
-            padding: 40px;
-            text-align: center;
-            transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-        .content-section.scrolled {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
         .product {
             display: inline-block;
             margin: 15px;
             padding: 15px;
             border-radius: 10px;
             width: 250px;
+            background: rgba(255, 255, 255, 0.8);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .product img {
@@ -123,17 +110,5 @@
     <footer>
         <p>&copy; 2025 Azienda Agricola Tirone - Tutti i diritti riservati.</p>
     </footer>
-
-    <script>
-        window.addEventListener('scroll', function() {
-            document.querySelectorAll('.content-section').forEach(section => {
-                if (window.scrollY > section.offsetTop - window.innerHeight / 2) {
-                    section.classList.add('scrolled');
-                } else {
-                    section.classList.remove('scrolled');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
